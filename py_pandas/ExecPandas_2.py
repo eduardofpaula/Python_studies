@@ -3,14 +3,14 @@ import pandas as pd
 
 # %%
 
-dados = {"nome": ["Téo", "Nah", "Napoleão"], "idade": [31, 32, 14]}
+dados = {'nome': ['Téo', 'Nah', 'Napoleão'], 'idade': [31, 32, 14]}
 dfDados = pd.DataFrame(dados)
 dfDados
 
 # %%
 
 # sumario de cada coluna
-dfDados["nome"].describe()
+dfDados['nome'].describe()
 
 # %%
 

@@ -16,10 +16,10 @@ series_dados = pd.Series(dados)
 # %%
 
 # Média
-print(f"Média: {round(series_dados.mean(),2)}")
+print(f'Média: {round(series_dados.mean(),2)}')
 
 # Desvio padrão
-print(f"Desvio Padrão: {round(series_dados.std(),2)}")
+print(f'Desvio Padrão: {round(series_dados.std(),2)}')
 
 # Valor Maximo
-print(f"Valor Maximo: {series_dados.max()}")
+print(f'Valor Maximo: {series_dados.max()}')

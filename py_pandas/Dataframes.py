@@ -5,21 +5,30 @@ import pandas as pd
 
 """dicionario com listas de dados"""
 data = {
-    "nome": ["João", "Maria", "José", "Pedro", "Ana", "Paula", "Carlos", "Lucas"],
-    "idade": [30, 42, 90, 34, 50, 60, 70, 80],
-    "cidade": [
-        "São Paulo",
-        "Rio de Janeiro",
-        "Curitiba",
-        "Porto Alegre",
-        "Salvador",
-        "Recife",
-        "Fortaleza",
-        "Manaus",
+    'nome': [
+        'João',
+        'Maria',
+        'José',
+        'Pedro',
+        'Ana',
+        'Paula',
+        'Carlos',
+        'Lucas',
+    ],
+    'idade': [30, 42, 90, 34, 50, 60, 70, 80],
+    'cidade': [
+        'São Paulo',
+        'Rio de Janeiro',
+        'Curitiba',
+        'Porto Alegre',
+        'Salvador',
+        'Recife',
+        'Fortaleza',
+        'Manaus',
     ],
 }
 
-data["idade"][0]
+data['idade'][0]
 
 # %%
 # Criando um DataFrame
@@ -28,15 +37,15 @@ df
 
 # %%
 # retornando o tipo de dado
-type(df["idade"])
+type(df['idade'])
 
 # %%
 # pegando o primeiro elemento do DataFrame com o método iloc
-df["idade"].iloc[0]
+df['idade'].iloc[0]
 
 # %%
 # pegando o primeiro elemento do DataFrame com o método loc
-df["cidade"]
+df['cidade']
 
 # %%
 # pegando os primeiros elementos do Dataframe com o método loc, retornando uma series
@@ -59,7 +68,7 @@ df.columns
 # %%
 
 # retorna as informações do DataFrame
-df.info(memory_usage="deep")
+df.info(memory_usage='deep')
 
 # %%
 
@@ -69,11 +78,11 @@ df.dtypes
 # %%
 
 # atribuir uma coluna nova
-df["peso"] = [90, 70, 80, 100]
+df['peso'] = [90, 70, 80, 100]
 
 sumario = df.describe()
 
-sumario["peso"]["mean"]
+sumario['peso']['mean']
 
 # %%
 
