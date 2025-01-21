@@ -44,8 +44,8 @@ series_idades.index
 
 # alterando o indice da serie
 print(series_idades)
-series_idades.index = ['e','d','c','a']
-print(series_idades['e'])
+series_idades.index = ["e", "d", "c", "a"]
+print(series_idades["e"])
 
 # %%
 
@@ -62,10 +62,10 @@ series_idades.iloc[2:4]
 # iloc garante que esta pegando pela posicao
 
 # acessando elementos pelo indices explicitamente, considerando o indices da série
-series_idades.loc['e']
+series_idades.loc["e"]
 
 # %%
 
 # pode atribuir um nome a serie
-series_idades.name = 'idades'
+series_idades.name = "idades"
 print(series_idades)
