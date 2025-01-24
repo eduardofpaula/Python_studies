@@ -32,7 +32,6 @@ while True:
 
 print('soma total ', total)
 
-
 # %%
 
 # Entrada: 556
@@ -199,7 +198,6 @@ if a > 1:
 else:
     print('Não é primo')
 
-
 # %%
 
 
@@ -280,7 +278,6 @@ print(fatorial(5))
 # %%
 
 lista = [123, 435, 987, 1984, 2, 19, 423, -178, 320]
-
 
 for i in lista:
     maior = lista.index(max(lista), 0, len(lista))

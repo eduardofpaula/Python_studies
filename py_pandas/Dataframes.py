@@ -2,7 +2,6 @@
 import pandas as pd
 
 # %%
-
 """dicionario com listas de dados"""
 data = {
     'nome': [
