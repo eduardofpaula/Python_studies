@@ -1,0 +1,60 @@
+# %%
+import pandas as pd
+import sqlalchemy
+
+# %%
+
+engine = sqlalchemy.create_engine('sqlite:///../data/database.db')
+# %%
+
+# lendo a tabela customers do banco de dados
+df_customers = pd.read_sql_table('customers', engine)
+# %%
+
+query = 'SELECT * FROM transactions LIMIT 10'
+df_transactions = pd.read_sql_query(query, engine)
+df_transactions
+# %%
+
+query = """
+SELECT *
+FROM customers AS t1
+LEFT JOIN transactions AS t2
+ON t1.UUID = t2.IdCustomer
+LIMIT 10
+"""
+
+df_join = pd.read_sql_query(query, engine)
+df_join
+# %%
+
+
+data_01 = {
+    'id': [1, 2, 3, 4],
+    'nome': ['Teo', 'Mat', 'Nah', 'Mah'],
+    'idade': [31, 31, 32, 32],
+}
+df_01 = pd.DataFrame(data_01)
+
+data_02 = {
+    'id': [5, 6, 7, 8],
+    'nome': ['Jose', 'Nathan', 'Arnaldo', 'Mario'],
+    'idade': [23, 33, 19, 21],
+}
+
+df_02 = pd.DataFrame(data_02)
+
+# %%
+
+# adicionando e criando dados na tabela tb_fodase, index=False para não salvar o index do dataframe
+df_01.to_sql('tb_fodase', engine, index=False)
+
+# %%
+
+# adicionando e criando dados na tabela tb_fodase, se a tabela já existir ela será substituida
+df_02.to_sql('tb_fodase', engine, index=False, if_exists='replace')
+
+# %%
+
+# lendo a tabela tb_fodase inteira do banco de dados
+pd.read_sql('tb_fodase', engine)
