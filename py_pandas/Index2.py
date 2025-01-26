@@ -31,7 +31,7 @@ dfs = []
 for i in files:
     dfs.append(import_etl(path + i))
 
-# concatenando os dataframes
+# concatenando os dataframes horizontamente e resetando o index
 df_edu = pd.concat(dfs, axis=1).reset_index()
 # salvando o arquivo csv
-df_edu.to_csv('../data/bia_consolidado.csv', sep=';', index=False)
+df_edu.to_csv('../data/edu_consolidado.csv', sep=';', index=False)
