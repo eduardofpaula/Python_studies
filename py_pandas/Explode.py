@@ -18,6 +18,7 @@ df
 def fatia_parcelas(row):
     return [row['Valor'] / row['Parcelas'] for i in range(row['Parcelas'])]
 
+
 # aplicar a função fatia_parcelas em cada linha do dataframe
 df['ValorParcela'] = df.apply(fatia_parcelas, axis=1)
 
@@ -54,6 +55,7 @@ def add_months(row):
     new_date = row['dtTransaction'] + np.timedelta64(row['Months_add'], 'm')
     dt_str = new_date.strftime('%Y-%M-15')
     return dt_str
+
 
 # aplicar a função add_months em cada linha do dataframe, criando a coluna DtFatura
 df_fatura['DtFatura'] = df_fatura.apply(add_months, axis=1)
