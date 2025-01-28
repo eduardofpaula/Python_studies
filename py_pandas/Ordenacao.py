@@ -9,6 +9,7 @@ df
 # %%
 
 # ordenando pelos pontos, e ja sobscreve o proprio objeto df, ascending serve para denominar a ordem, pode ser crescente(default) ou decrescente
+# inplace serve para sobrescrever o proprio objeto
 df.sort_values(by='Points', ascending=False, inplace=True)
 # renomeando colunas
 df.rename(

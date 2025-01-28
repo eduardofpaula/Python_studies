@@ -3,8 +3,6 @@
 import math
 import random
 
-from pycparser.c_ast import While
-
 # %%
 # sqrt é a raiz quadrada de um numero, importando da biblioteca math
 math.sqrt(49)
